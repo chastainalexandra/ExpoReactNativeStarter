@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "react-native-app",
-    "slug": "react-native-app",
+    "name": "HomeBarInventory",
+    "slug": "HomeBarInventory",
     "privacy": "public",
-    "sdkVersion": "31.0.0",
+    "sdkVersion": "45.0.0",
     "platforms": [
       "ios",
       "android"

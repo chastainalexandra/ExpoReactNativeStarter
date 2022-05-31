@@ -1,23 +1,16 @@
-import React from 'react'
-import { Platform, StatusBar, StyleSheet, View } from 'react-native'
+import {
+  createStackNavigator,
+  createAppContainer
+} from 'react-navigation';
+import HomeScreen from './screens/HomeScreen';
 
-import AppNavigator from './navigation/AppNavigator'
+const RootStack = createStackNavigator({
+Home: {
+  screen: HomeScreen
+},
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff'
-  }
-})
+});
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+const App = createAppContainer(RootStack);
 
-        <AppNavigator />
-      </View>
-    )
-  }
-}
+export default App;
